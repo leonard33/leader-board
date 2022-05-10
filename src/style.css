@@ -39,7 +39,8 @@ h1 {
   cursor: pointer;
 }
 
-#myname, #myscore {
+#myname,
+#myscore {
   height: 30px;
   margin: 10px;
 }
@@ -75,4 +76,4 @@ button {
   height: 35px;
   width: 100px;
   cursor: pointer;
- }
+}
