@@ -37,6 +37,7 @@ h1 {
   margin: 10px;
   justify-content: center;
   cursor: pointer;
+  align-self: flex-end;
 }
 
 #myname,
