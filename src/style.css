@@ -6,73 +6,73 @@ body {
 }
 
 h1 {
-   margin-left: 10rem;
+  margin-left: 10rem;
 }
 
 .container {
-    width: 80vw;
-    margin: auto;
-    align-items: center;
-    display: flex;
+  width: 80vw;
+  margin: auto;
+  align-items: center;
+  display: flex;
 }
 
 .form-container {
-    display: flex;
-    width: 30vw;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  width: 30vw;
+  align-items: center;
+  flex-direction: column;
 }
 
 #form-1 {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 20px auto;
 }
 
 #submit {
-    width: 80px;
-    height: 40px;
-    display: flex;
-    margin: 10px;
-    justify-content: center;
-    cursor: pointer;
+  width: 80px;
+  height: 40px;
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+  cursor: pointer;
 }
 
 #myname, #myscore {
-    height: 30px;
-    margin: 10px;
+  height: 30px;
+  margin: 10px;
 }
 
 .score-otput {
-    display: flex;
-    flex-direction: column;
-    width: 30vw;
-    margin: 20px;
-    border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  margin: 20px;
+  border: 2px solid black;
 }
 
 .scoreput {
-    display: flex;
-    width: 30vw;
-    margin-left: -40px;
-    list-style-type: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  display: flex;
+  width: 30vw;
+  margin-left: -40px;
+  list-style-type: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .scoreput:nth-child(even) {
-    background-color: rgb(223, 217, 217);
- }
+  background-color: rgb(223, 217, 217);
+}
 
- .refreshing {
-     display: flex;
-     align-items: center;
-     justify-content: space-around;
- }
+.refreshing {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 
- button {
-     height: 35px;
-     width: 100px;
-     cursor: pointer;
+button {
+  height: 35px;
+  width: 100px;
+  cursor: pointer;
  }
