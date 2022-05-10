@@ -4,9 +4,30 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
   <title>Title</title>
 <script defer src="runtime.js"></script><script defer src="main.js"></script></head>
 <body>
-  
+  <header><h1>Leader board</h1></header>
+  <div class="container">
+    <div class="output-container">
+      <div class="refreshing">
+      <h3>Resent Scores</h3><button type="button">Refresh</button>
+    </div>
+    <ul class="score-otput">
+      <li class="scoreput">
+    </li>
+    </ul>
+  </div>
+    <div class="form-container">
+      <h3>Add Your Score</h3>
+      <form id="form-1">
+        <input type="text" placeholder="Your Name" id="myname">
+        <input type="text" placeholder="Your Score" id="myscore">
+        <input type="button" value="submit" id="submit">
+      </form>
+    </div>
+  </div>
+  <script src="./index.js"></script>
 </body>
 </html>
