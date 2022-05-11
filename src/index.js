@@ -21,7 +21,7 @@ const form = document.querySelector('#form-1');
 const myname = document.querySelector('#myname');
 const myscore = document.querySelector('#myscore');
 const refresh = document.querySelector('#refresh');
-const scorelist = document.querySelector('.score-otput');
+const scorelist = document.querySelector('.stripes');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -37,9 +37,11 @@ const getdata = async () => {
   scorelist.innerHTML = '';
   // eslint-disable-next-line array-callback-return
   scoredata.result.forEach((key) => {
-    scorelist.innerHTML += `<ul class="scoreput">
-    <li class="names">${key.user}:&nbsp;${key.score}</li>
-  </ul>`;
+    scorelist.innerHTML += ` <tr>
+      <td>${key.user}:</td>
+      <td>${key.score}</td>
+      <td><span class="material-icons md-light">local_police</span></td>
+    </tr>`;
   });
 };
 refresh.addEventListener('click', (e) => {

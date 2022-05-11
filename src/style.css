@@ -3,16 +3,24 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: rgb(231, 231, 241);
 }
 
 h1 {
   margin-left: 10rem;
+  margin-top: 10px;
+  font-family: 'Oleo Script Swash Caps', cursive;
+}
+
+h3 {
+  font-family: 'Secular One', sans-serif;
 }
 
 .container {
   width: 80vw;
   margin: auto;
   display: flex;
+  justify-content: space-around;
 }
 
 .form-container {
@@ -25,24 +33,26 @@ h1 {
 #form-1 {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 30vw;
   margin: 20px auto;
 }
 
 #submit {
-  width: 80px;
+  width: 120px;
   height: 40px;
   display: flex;
   margin: 10px;
   justify-content: center;
   cursor: pointer;
   align-self: flex-end;
+  font-weight: 700;
 }
 
 #myname,
 #myscore {
   height: 30px;
   margin: 10px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .score-otput {
@@ -62,6 +72,12 @@ h1 {
   padding-bottom: 10px;
 }
 
+.table {
+  width: 40vw;
+  margin-left: -40px;
+  margin-top: 20px;
+}
+
 .scoreput:nth-child(even) {
   background-color: rgb(223, 217, 217);
 }
@@ -69,11 +85,24 @@ h1 {
 .refreshing {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+#refresh {
+  font-weight: 900;
+  height: 40px;
+  width: 120px;
+  cursor: pointer;
 }
 
 button {
-  height: 35px;
-  width: 100px;
+  height: 40px;
+  width: 120px;
   cursor: pointer;
+}
+
+.th {
+  font-weight: 900;
+  font-size: 18px;
+  color: white;
 }
