@@ -2,7 +2,7 @@
 import './style.css';
 
 const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Oawl0gMZlyz9hcMNVFYR/scores';
-async function pushdata(username, userscore) {
+const pushdata = async (username, userscore) => {
   await fetch(url, {
     method: 'POST',
     body: JSON.stringify({
@@ -15,7 +15,7 @@ async function pushdata(username, userscore) {
   })
     .then((response) => response.json())
     .then((json) => json);
-}
+};
 
 const form = document.querySelector('#form-1');
 const myname = document.querySelector('#myname');
@@ -31,7 +31,7 @@ form.addEventListener('submit', (e) => {
   form.reset();
 });
 
-async function getdata() {
+const getdata = async () => {
   const scorestream = await fetch(url);
   const scoredata = await scorestream.json();
   scorelist.innerHTML = '';
@@ -41,7 +41,7 @@ async function getdata() {
     <li class="names">${key.user}:&nbsp;${key.score}</li>
   </ul>`;
   });
-}
+};
 refresh.addEventListener('click', (e) => {
   e.preventDefault();
   getdata();
