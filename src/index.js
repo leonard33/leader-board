@@ -1,33 +1,50 @@
 // css files here
 import './style.css';
 
-const scores = [
-  {
-    name: 'Joseph',
-    score: 100,
-  },
-  {
-    name: 'paul',
-    score: 50,
-  },
-  {
-    name: 'John',
-    score: 20,
-  },
-  {
-    name: 'Peter',
-    score: 80,
-  },
-  {
-    name: 'Kelvin',
-    score: 60,
-  },
-];
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Oawl0gMZlyz9hcMNVFYR/scores';
+const pushdata = async (username, userscore) => {
+  await fetch(url, {
+    method: 'POST',
+    body: JSON.stringify({
+      user: username,
+      score: userscore,
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => json);
+};
 
+const form = document.querySelector('#form-1');
+const myname = document.querySelector('#myname');
+const myscore = document.querySelector('#myscore');
+const refresh = document.querySelector('#refresh');
 const scorelist = document.querySelector('.score-otput');
 
-scores.forEach((scored) => {
-  scorelist.innerHTML += `<ul class="scoreput">
-  <li class="names">${scored.name}:&nbsp;${scored.score}</li>
-</ul>`;
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const myname = document.querySelector('#myname').value;
+  const myscore = document.querySelector('#myscore').value;
+  pushdata(myname, myscore);
+  form.reset();
 });
+
+const getdata = async () => {
+  const scorestream = await fetch(url);
+  const scoredata = await scorestream.json();
+  scorelist.innerHTML = '';
+  // eslint-disable-next-line array-callback-return
+  scoredata.result.forEach((key) => {
+    scorelist.innerHTML += `<ul class="scoreput">
+    <li class="names">${key.user}:&nbsp;${key.score}</li>
+  </ul>`;
+  });
+};
+refresh.addEventListener('click', (e) => {
+  e.preventDefault();
+  getdata();
+});
+
+document.addEventListener('DOMContentLoaded', getdata);

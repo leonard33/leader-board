@@ -12,7 +12,6 @@ h1 {
 .container {
   width: 80vw;
   margin: auto;
-  align-items: center;
   display: flex;
 }
 
