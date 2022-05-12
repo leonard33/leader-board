@@ -18,8 +18,8 @@ const pushdata = async (username, userscore) => {
 };
 
 const form = document.querySelector('#form-1');
-const myname = document.querySelector('#myname');
-const myscore = document.querySelector('#myscore');
+// const myname = document.querySelector('#myname');
+// const myscore = document.querySelector('#myscore');
 const refresh = document.querySelector('#refresh');
 const scorelist = document.querySelector('.stripes');
 

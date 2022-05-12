@@ -1,7 +1,7 @@
 # leader-board
 
 This is a project on leader-board.
-Its a structure for now;
+Here we are using an API to fetch post and display scores on the leader-board.
  
 ## Built With
 
@@ -11,7 +11,6 @@ Its a structure for now;
 
 ## Live Demo 
 Not available yet.
-
 
 ## Getting Started
 
